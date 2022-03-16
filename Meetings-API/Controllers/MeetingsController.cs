@@ -82,15 +82,15 @@ namespace Meetings_API.Controllers
             return NoContent();
         }
 
-        [Route("Users")]
         [HttpGet]
+        [Route("/[controller]/{id}/Users")]
         public IEnumerable<User> MeetingUsers(Guid id)
         {
             return repository.Meetings.GetMeetingUsers(id);
         }
 
-        [Route("Users")]
         [HttpPut]
+        [Route("/[controller]/{id}/Users/{userId}")]
         public ActionResult AddUserToMeeting(Guid id, Guid userId)
         {
             var existingMeeting = repository.Meetings.GetMeeting(id);
@@ -106,8 +106,8 @@ namespace Meetings_API.Controllers
             return NoContent();
         }
 
-        [Route("Users")]
         [HttpDelete]
+        [Route("/[controller]/{id}/Users/{userId}")]
         public ActionResult RemoveUserFromMeeting(Guid id, Guid userId)
         {
             var existingMeeting = repository.Meetings.GetMeeting(id);

@@ -15,12 +15,9 @@ builder.Services.AddSingleton<IUnitOfWork, UnitOfWork>();
 
 var app = builder.Build();
 
-//Configure the HTTP request pipeline.
-//if (app.Environment.IsDevelopment())
-//{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-//}
+
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 
