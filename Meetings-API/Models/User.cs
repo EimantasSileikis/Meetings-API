@@ -4,6 +4,7 @@ namespace Meetings_API.Models
 {
     public class User
     {
+        [Required]
         public Guid Id { get; set; }
         [Required]
         public string Name { get; set; }
