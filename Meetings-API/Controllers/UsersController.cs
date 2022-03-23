@@ -66,7 +66,7 @@ namespace Meetings_API.Controllers
 
             repository.Users.UpdateUser(existingUser);
 
-            return NoContent();
+            return Ok(existingUser);
         }
 
         [HttpDelete("{id}")]

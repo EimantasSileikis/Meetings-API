@@ -64,7 +64,7 @@ namespace Meetings_API.Controllers
 
             repository.Meetings.UpdateMeeting(existingMeeting);
 
-            return NoContent();
+            return Ok(existingMeeting);
         }
 
         [HttpDelete("{id}")]
@@ -120,7 +120,7 @@ namespace Meetings_API.Controllers
 
             repository.Meetings.RemoveUserFromMeeting(id, existingUser);
 
-            return NoContent();
+            return Ok(existingUser);
         }
     }
 }
