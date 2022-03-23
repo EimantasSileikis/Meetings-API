@@ -52,7 +52,7 @@ namespace Meetings_API.Controllers
         }
 
         [HttpPut("{id}")]
-        public ActionResult UpdateItem(Guid id, UserDTO meeting)
+        public ActionResult UpdateUser(Guid id, UserDTO meeting)
         {
             var existingUser = repository.Users.GetUser(id);
 
